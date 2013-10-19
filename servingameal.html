@@ -21,13 +21,7 @@
     <script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"></script>
     <script src='https://cdn.firebase.com/v0/firebase.js'></script>
 </head>
-<script>
-var myDataRef = new Firebase('https://tastyplanetse.firebaseio.com/');
-     $('#datetimepicker').keypress(function (e) {
-});
 
-       
-</script>
 
 <body>
 
@@ -60,12 +54,14 @@ var myDataRef = new Firebase('https://tastyplanetse.firebaseio.com/');
 
 <!--set date & time-->
 
-<!--Availabe seats-->
-     <h4>What are you serving?</h4>
-     <label for="exampleInputNumber"></label>
-     <input type="name" class="form-control" id="exampleInputEmail" placeholder="What are you serving?">
+<!--Availabe What are you serving-->
+    <div>
+        <h4>What are you serving?</h4>
+        <textarea name="message" placeholder="What are you serving?"></textarea>
+    </div>
+    </div>
 
-<!--Availabe seats end-->
+<!--Availabe What are you serving end-->
 
 
 <!--theme-->
@@ -117,7 +113,6 @@ var myDataRef = new Firebase('https://tastyplanetse.firebaseio.com/');
      </div>
     </div>
   </div>
-</div>
 
 <!--theme end-->
 
@@ -125,8 +120,7 @@ var myDataRef = new Firebase('https://tastyplanetse.firebaseio.com/');
 <!--extra information-->
 
     <h4>Any Extra information to add</h4>
-     <label for="exampleInputNumber"></label>
-     <input type="email" class="form-control" id="exampleInputEmail" placeholder="Extra information">
+     <textarea name="message" placeholder="Extra information?"></textarea>
 
 <!--extra information end-->
 
