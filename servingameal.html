@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Serving a Meal</title>
+
+    <!--  CSS  -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <!--  JAVASCRIPT  -->
+    <!-- jquery should go here! -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js"></script>
+    <script type="text/javascript" src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+</head>
+<script>
+var myDataRef = new Firebase('https://tastyplanet.firebaseio.com/');
+     $('#datetimepicker').keypress(function (e) {
+});
+
+       
+</script>
+
+<body>
+
+<!--dropdown menu-->
+<section>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          What to serve <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#breakfast">Breakfast</a></li>
+          <li><a href="#lunch">Lunch</a></li>
+          <li><a href="#fika">Fika</a></li>
+          <li><a href="#dinner">Dinner</a></li>
+        </ul>
+    </div>
+</section>
+
+<!--dropdown menu end-->
+
+<!--set date & time-->
+<section>
+    <div id="datetimepicker" class="input-append date">
+      <input type="text"></input>
+      <span class="add-on">
+        <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+      </span>
+    </div> 
+</section>    
+
+<!--set date & time-->
+
+<!--Availabe seats-->
+     <h4>What are you serving?</h4>
+     <label for="exampleInputNumber"></label>
+     <input type="name" class="form-control" id="exampleInputEmail" placeholder="What are you serving?">
+
+<!--Availabe seats end-->
+
+
+<!--theme-->
+<div class="container mt80">
+<div class="control-group">
+    <h4>Theme</h4>
+    <div class="controls span1">
+        <label class="checkbox">
+            <input type="checkbox" value="option1" id="inlineCheckbox1"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option2" id="inlineCheckbox2"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" id="inlineCheckbox3"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" id="inlineCheckbox4"> Meat
+        </label>
+    </div>
+    <div class="controls span2">
+        <label class="checkbox">
+            <input type="checkbox" value="option1" id="inlineCheckbox5"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option2" id="inlineCheckbox6"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" id="inlineCheckbox7"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" id="inlineCheckbox8"> Meat
+        </label>
+    </div>
+    <div class="controls span3">
+        <label class="checkbox">
+            <input type="checkbox" value="option1" id="inlineCheckbox9"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option2" id="inlineCheckbox10"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" id="inlineCheckbox11"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" id="inlineCheckbox12"> Meat
+        </label>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+
+<!--theme end-->
+
+
+<!--extra information-->
+
+    <h4>Any Extra information to add</h4>
+     <label for="exampleInputNumber"></label>
+     <input type="email" class="form-control" id="exampleInputEmail" placeholder="Extra information">
+
+<!--extra information end-->
+
+<!--Button-->
+
+    <section>
+        <button type="button" class="btn btn-default btn-lg">Send Request</button>
+    </section>
+
+<!--Button end-->
+
+
+    </body>
+</html>

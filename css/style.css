@@ -1,0 +1,89 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #fff0c9;
+}
+
+/*header*/
+.jumbotron {
+  margin-left: 30px;
+  text-align: left;
+}
+.jumbotron h4 {
+  font-size: 24px;
+  line-height: 1;
+  margin-left: 20px;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/*field to fill in*/
+.mt10 {
+margin-top: 20px;
+margin-left: 120px;
+}
+
+.mt20 {
+  margin-top: 10px;
+  margin-left: -70px;
+}
+
+/*favourite add tool*/
+
+.mt30 { 
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.input-append {
+  margin-left: 0px;
+}
+
+/* saving button*/
+.mt40 {
+  margin-top: 15px;
+  margin-left: 50px; 
+}
+
+.mt42 {
+  margin-top: 20px;
+  margin-left: -70px;
+}
+
+.form-group {
+  margin-left: 50px;
+}
+
+.checkbox {
+  margin-left: 50px;
+}
+
+.btn-default {
+  margin-left: 50px;
+}
+
+.mt50 {
+  margin-left: 50px;
+  margin-bottom: 70px;
+  margin-top: 10px;
+  max-height: 150px;
+  max-width: 150px;
+}
+
+h4 {
+  color: #75806b;
+}
+
+.btn-contact {
+  margin-top: 10px;
+  margin-left: 50px;
+  color: #628044;
+}
+
+.mt60 {
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
