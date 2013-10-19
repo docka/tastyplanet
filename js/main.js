@@ -8,4 +8,3 @@ $(document).ready(function() {
 
 <!-- Firebase support -->
 var myDataRef = new Firebase('https://tastyplanetse.firebaseio.com/');
-});
