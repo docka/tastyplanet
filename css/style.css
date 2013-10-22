@@ -9,13 +9,13 @@ body {
 
 /*header*/
 .jumbotron {
-  margin-left: 30px;
+  margin-left: 0px;
   text-align: left;
 }
 .jumbotron h4 {
   font-size: 24px;
   line-height: 1;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 .jumbotron .btn {
   font-size: 21px;
@@ -25,26 +25,19 @@ body {
 /*field to fill in*/
 .mt10 {
 margin-top: 20px;
-margin-left: 120px;
+margin-left: 0px;
 }
 
 .mt20 {
   margin-top: 10px;
-  margin-left: -70px;
+  margin-left: 0px;
 }
-
-/*favourite add tool*/
 
 .mt30 { 
   margin-top: 30px;
   margin-left: 50px;
 }
 
-.input-append {
-  margin-left: 0px;
-}
-
-/* saving button*/
 .mt40 {
   margin-top: 15px;
   margin-left: 50px; 
@@ -55,9 +48,6 @@ margin-left: 120px;
   margin-left: -70px;
 }
 
-.form-group {
-  margin-left: 50px;
-}
 
 .checkbox {
   margin-left: 50px;
@@ -90,6 +80,8 @@ h4 {
   margin-left: 0px;
 }
 
-font-family: 'Roboto Condensed', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Titan One', cursive;
+.mt09 {
+  margin-left: 50px;
+}
+
+
