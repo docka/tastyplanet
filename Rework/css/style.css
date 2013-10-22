@@ -1,0 +1,58 @@
+body {
+	 font-family: 'Roboto Condensed', sans-serif;
+}
+
+.row {
+	text-align: center;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+
+#title {
+	display: block;
+	text-align: center;
+}
+.navbar-header {
+	background-color: #3C33E8;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#nav-container {
+
+}
+
+#nav-padding {
+
+}
+
+#eat{
+	color: black;
+	text-align: center;
+}
+
+li {
+	display: inline-block;
+}
+
+
+#cook {
+	color: black;
+	text-align: center;
+}
+
+#about {
+	color: black;
+	text-align: center;
+}
+
+#text {
+	color: black;
+	text-align: center;
+}
+
+#image {
+	color: black;
+	text-align: center;
+}
