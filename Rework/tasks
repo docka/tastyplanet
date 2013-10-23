@@ -5,3 +5,4 @@ create header
 create body
 -everytime you click a navbar item, text changes in the body
 -responsive
+-center

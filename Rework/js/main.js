@@ -1,16 +1,18 @@
 $(document).ready(function(){
 
-
-  $("#setting").click(function(){
-    $("#settings").show();
+  $( "#cook" ).on('click', function() {
+    $('#home').fadeOut();
+    $('#servingmeal').fadeIn();
   });
 
-  $( "#cook").click(function(){
-  	$( "#servingmeal" ).show();
+    $( "#setting" ).on('click', function() {
+    $('#home').fadeOut();
+    $('#settings').fadeIn();
   });
 
 
- 
+
+
 
 
 
