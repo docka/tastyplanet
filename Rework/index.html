@@ -18,8 +18,8 @@
 			<div class="row">
 			   <div class="col-md-12">
 				<ul>
-					<li><button type="button" class="btn btn-default navbar-btn">eat</button></li>
-					<li><button type="button" class="btn btn-default navbar-btn">cook</button></li>
+					<li><button id="eat" type="button" class="btn btn-default navbar-btn">eat</button></li>
+					<li><button id="cook" type="button" class="btn btn-default navbar-btn">cook</button></li>
 					<li><button id="about" type="button" class="btn btn-default navbar-btn">about</button></li>
 					<li><button id="setting" type="button" class="btn btn-default navbar-btn">settings</button></li>
 					<li><img src="images/logo-tastyp.png"><div class="img-responsive" style="width: 40px;"></li>
@@ -32,18 +32,133 @@
   </div>
 </nav>
 
+<!--nav bar end--> 
 
-<div id="hej" style="display:none">
-<div class="containter mt09">
-    <!--header-->
 
-    <div class="jumbotron">
-      <a href="index.html"><img src="images/logo-tastyp.png"><div class="img-responsive" style="width: 40px;"></a>
-      <h4>About me</h4>
+
+<!--serving a meal-->
+
+<div id="servingmeal" style="display:none">
+	<div class="container mt05">
+	<title>Serving a Meal</title>
+<section>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          What to serve <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#breakfast">Breakfast</a></li>
+          <li><a href="#lunch">Lunch</a></li>
+          <li><a href="#fika">Fika</a></li>
+          <li><a href="#dinner">Dinner</a></li>
+        </ul>
     </div>
+</section>
+
+<!--dropdown menu end-->
+
+<!--set date & time-->
+<section>
+    <div id="datetimepicker" class="input-append date">
+      <input type="text"></input>
+      <span class="add-on">
+        <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+      </span>
+    </div> 
+</section>    
+
+<!--set date & time-->
+
+<!--Availabe seats-->
+     <h4>What are you serving?</h4>
+     <INPUT TYPE="TEXT" NAME="MyValue" placeholder="What are you serving?">
+<!--Availabe seats end-->
+
+
+<!--theme-->
+
+  <div class="control-group" class="col-xs-4 col-md-6 col-lg-12">
+    <h4>Theme</h4>
+    <div class="container mt42">
+    <div class="controls span1">
+        <label class="checkbox" class="col-xs-4 col-md-6 col-lg-12">
+            <input type="checkbox" value="option1" id="inlineCheckbox1"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option2" id="inlineCheckbox2"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" id="inlineCheckbox3"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" id="inlineCheckbox4"> Meat
+        </label>
     </div>
-    <!--header end-->
+    <div class="controls span1">
+        <label class="checkbox">
+            <input type="checkbox" value="option1" id="inlineCheckbox5"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option2" id="inlineCheckbox6"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" id="inlineCheckbox7"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" id="inlineCheckbox8"> Meat
+        </label>
+    </div>
+    <div class="controls span1">
+        <label class="checkbox">
+            <input type="checkbox" value="option1" id="inlineCheckbox9"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option2" id="inlineCheckbox10"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" id="inlineCheckbox11"> Meat
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" id="inlineCheckbox12"> Meat
+        </label>
+      </div>
+     </div>
+    </div>
+  </div>
+<!--theme end-->
+
+
+<!--extra information-->
     <div class="container mt10">
+    	<h4>Any Extra information to add</h4>
+    <INPUT TYPE="TEXT" NAME="MyValue" placeholder="Extra information?">
+
+<!--extra information end-->
+
+<!--Button-->
+
+	    <section>
+	        <button type="button" class="btn btn-default btn-lg">Send Request</button>
+	    </section>
+	</div>
+	</div>
+</div>
+</div>
+<!--serving a meal end-->
+
+
+
+<!--settings about me-->
+<div id="settings" style="display:none">
+	<div class="containter mt09">
+
+    <!--header-->
+    	<div class="jumbotron">
+      		<h4>About me</h4>
+    	</div>
+
+    <!--header end-->
+    <div class="container mt15">
       <div class="containter mt20">
             <label for="Header">My Name</label>
             <INPUT TYPE="TEXT" NAME="MyValue" placeholder="Enter Name">
@@ -57,8 +172,6 @@
      </div>
     </div>
 
-
-<div class="container mt40">
   <div class="control-group">
     <h4>My favourites</h4>
     <div class="container mt42">
@@ -108,19 +221,19 @@
     </div>
   </div>
 
+
       <!--Button heads-->
       <div class="container mt60">
        <button type="button" class="btn btn-default btn-lg">Save Settings</button>
       </div> 
       <!--Button heads out-->
           </div>
-     </div>
-</div>
+      </div>
+    </div>
+    <!--settings about me-->
 
 
 
-
-<div id="hello" style="display:none">hello</div>
 
 
 <!-- skapa en div som heter något där du har texten som du vill visa, skapa en function så när

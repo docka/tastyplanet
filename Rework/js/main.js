@@ -2,12 +2,16 @@ $(document).ready(function(){
 
 
   $("#setting").click(function(){
-    $("#hej").show();
+    $("#settings").show();
   });
 
-  $("#about").click(function(){
-    $("#hello").show();
+  $( "#cook").click(function(){
+  	$( "#servingmeal" ).show();
   });
+
+
+ 
+
 
 
 });
