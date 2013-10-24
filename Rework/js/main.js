@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   $( "#cook" ).on('click', function() {
-    $('#home').fadeOut();
+    $('#').fadeOut();
     $('#servingmeal').fadeIn();
   });
 

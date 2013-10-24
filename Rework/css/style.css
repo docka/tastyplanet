@@ -12,9 +12,6 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8ffe8', endColorstr='#abbd73',GradientType=0 ); /* IE6-9 */
 }
 /*menu navbar*/
-.mt02 {
-
-}
 
 .row {
   margin-bottom: 30px;
@@ -48,8 +45,8 @@ body {
   background: -ms-linear-gradient(top, #232868 0%,#293ce8 11%,#293ce8 91%,#232868 100%); /* IE10+ */
   background: linear-gradient(to bottom, #232868 0%,#293ce8 11%,#293ce8 91%,#232868 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#232868', endColorstr='#232868',GradientType=0 ); /* IE6-9 */
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 30px;
+	padding-bottom: 5px;
 }
 
 #nav-container {
@@ -124,7 +121,8 @@ li {
 }
 
 h4 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Titan One', cursive;
+  font-size: 26pt;
 }
 
 #text {
