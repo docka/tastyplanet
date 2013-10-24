@@ -1,14 +1,15 @@
 $(document).ready(function(){
 
-  $( "#cook" ).on('click', function() {
-    $('#').fadeOut();
-    $('#servingmeal').fadeIn();
+    $( "#setting" ).on('click', function() {
+      $("#part2").show();
+      $("#part1").hide();
+    //$('#text').fadeOut();
+    //console.log("click")
+    
   });
 
-    $( "#setting" ).on('click', function() {
-    $('#home').fadeOut();
-    $('#settings').fadeIn();
-  });
+
+  //instagram feed
 
     // Function that is called once the data is returned
     function processImages(response) {
@@ -28,7 +29,8 @@ $(document).ready(function(){
 		var url = "https://api.instagram.com/v1/tags/" + hashtag + "/media/recent?access_token=22702850.f59def8.6825c67f29e84bf8826b9cdd204743ed&callback=?";
 		$.getJSON(url, processImages);
       $("#images img").remove();
-  
+
+  //instagram feed ends
 
 });
 
