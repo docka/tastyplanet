@@ -1,12 +1,32 @@
 $(document).ready(function(){
 
     $( "#setting" ).on('click', function() {
-      $("#part2").show();
+      //$("#part1").append("whaaat");
       $("#part1").hide();
+      $("#part3").hide();
+      $("#part4").hide();
+      $("#part2").show();
+
+    });    
+
+    $("#cook").on('click', function() {
+      $("#part1").hide();
+      $("#part2").hide();
+      $("#part4").hide();
+      $("#part3").show();
+
+
+    }); 
+
+    $("#book").on('click', function() {
+      $("#part1").hide();
+      $("#part2").hide();
+      $("#part3").hide();
+      $("#part4").show();
+
     //$('#text').fadeOut();
     //console.log("click")
-    
-  });
+   });
 
 
   //instagram feed
