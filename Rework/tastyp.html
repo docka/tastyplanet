@@ -3,9 +3,17 @@
 <html>
 <head>
 	<title>tastyP</title>
-	    <!--  CSS  -->
+    <!--  CSS  -->
     <link href="css/bootstrap3.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700|Roboto:400,300italic,700|Titan+One' rel='stylesheet' type='text/css'>
+
+    <!--  JAVASCRIPT  -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+    <script src="js/instafeed.min.js"></script>
 
 </head>
 <body>
@@ -82,63 +90,74 @@
 
     <!--header end-->
     <div class="container mt15">
-            <label for="Header">My Name</label>
-            <INPUT TYPE="TEXT" NAME="MyValue" placeholder="Enter Name">
-            <label for="Header">My Number</label>
-            <INPUT TYPE="TEXT" NAME="MyValue" placeholder="Enter Number">
-            <label for="Header">My Email</label>
-            <INPUT TYPE="TEXT" NAME="MyValue" placeholder="Enter Email">
-            <label for="Header">My Address</label>
-            <INPUT TYPE="TEXT" NAME="MyValue" placeholder="Enter Address">
+            <label for="Name">Name</label>
+            <input type="text" id="userNameInput" placeholder=" Insert your Name">
+            <label for="Email">Email</label>
+            <input type="email" id="userIdInput" requried placeholder=" Insert your Email">
+            <label for="Address">Address</label>
+            <input type="text" id="userAddressInput" placeholder=" Insert your Address">
      </div>
     </div>
 
   <div class="control-group">
     <h4>My favourites</h4>
         <label class="checkbox">
-            <input type="checkbox" value="option1" id="inlineCheckbox1"> Meat
+            <input type="checkbox" value="option1" class="food01"> FoodType01
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option2" id="inlineCheckbox2"> Meat
+            <input type="checkbox" value="option2" class="food02"> FoodType02
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox3"> Meat
+            <input type="checkbox" value="option3" class="food03"> FoodType03
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox4"> Meat
+            <input type="checkbox" value="option3" class="food04"> FoodType04
         </label>
     </div>
     <div class="controls span1">
         <label class="checkbox">
-            <input type="checkbox" value="option1" id="inlineCheckbox5"> Meat
+            <input type="checkbox" value="option1" class="food05"> FoodType05
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option2" id="inlineCheckbox6"> Meat
+            <input type="checkbox" value="option2" class="food06"> FoodType06
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox7"> Meat
+            <input type="checkbox" value="option3" class="food07"> FoodType07
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox8"> Meat
+            <input type="checkbox" value="option3" class="food08"> FoodType08
         </label>
     </div>
     <div class="controls span1">
         <label class="checkbox">
-            <input type="checkbox" value="option1" id="inlineCheckbox9"> Meat
+            <input type="checkbox" value="option1" class="food09"> FoodType09
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option2" id="inlineCheckbox10"> Meat
+            <input type="checkbox" value="option2" class="food10"> FoodType10
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox11"> Meat
+            <input type="checkbox" value="option3" class="food11"> FoodType11
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox12"> Meat
+            <input type="checkbox" value="option3" class="food12"> FoodType12
         </label>
-
+        <!--Adding profile to Firebase by pressing Enter-->
+            <script>
+              var myProfileRef = new Firebase('https://tastyplanetse.firebaseio.com/profiles');
+                $('#userAddressInput').keypress(function (e) {
+                  if (e.keyCode == 13) {
+                    var userName = $('#userNameInput').val();
+                    var userId = $('#userIdInput').val();
+                    var userAddress =$('#userAddressInput').val();
+                    myProfileRef.push({userId: userId, userName: userName, userAddress: userAddress});
+                    
+                    console.log({userId: userId, userName: userName, userAddress: userAddress});
+                  }
+                });
+            </script>
         <div class="container mt60">
-       <button type="button" class="btn btn-default btn-lg">Save Settings</button>
-     </div>
+        <button type="button" class="btn btn-default btn-lg">Save Profile</button>
+        </div>
         </div> 
       </div>
     </div>
@@ -153,7 +172,8 @@
     <div class="container mt05">
 <section>
   <h4>What am I serving?</h4>
-    <INPUT TYPE="TEXT" NAME="MyValue" placeholder="What are you serving?">
+    <input type="text" id="dinnerNameInput" placeholder=" What are you serving?">
+
     <div class="btn-group">
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
           What to serve <span class="caret"></span>
@@ -171,13 +191,12 @@
 <!--set date & time-->
 <section>
     <div id="datetimepicker" class="input-append date">
-      <input type="text"></input>
+      <input type="text" id="dateTimeInput"></input>
       <span class="add-on">
         <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
       </span>
     </div> 
 </section>    
-
 <!--set date & time-->
 
 
@@ -188,45 +207,45 @@
     <h4>Theme</h4>
     <div class="container mt42">
     <div class="controls span1">
-        <label class="checkbox" class="col-xs-4 col-md-6 col-lg-12">
-            <input type="checkbox" value="option1" id="inlineCheckbox1"> Meat
+        <label class="checkbox">
+            <input type="checkbox" value="option1" class="food01"> FoodType01
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option2" id="inlineCheckbox2"> Meat
+            <input type="checkbox" value="option2" class="food02"> FoodType02
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox3"> Meat
+            <input type="checkbox" value="option3" class="food03"> FoodType03
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox4"> Meat
-        </label>
-    </div>
-    <div class="controls span1">
-        <label class="checkbox">
-            <input type="checkbox" value="option1" id="inlineCheckbox5"> Meat
-        </label>
-        <label class="checkbox">
-            <input type="checkbox" value="option2" id="inlineCheckbox6"> Meat
-        </label>
-        <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox7"> Meat
-        </label>
-        <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox8"> Meat
+            <input type="checkbox" value="option3" class="food04"> FoodType04
         </label>
     </div>
     <div class="controls span1">
         <label class="checkbox">
-            <input type="checkbox" value="option1" id="inlineCheckbox9"> Meat
+            <input type="checkbox" value="option1" class="food05"> FoodType05
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option2" id="inlineCheckbox10"> Meat
+            <input type="checkbox" value="option2" class="food06"> FoodType06
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox11"> Meat
+            <input type="checkbox" value="option3" class="food07"> FoodType07
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox12"> Meat
+            <input type="checkbox" value="option3" class="food08"> FoodType08
+        </label>
+    </div>
+    <div class="controls span1">
+        <label class="checkbox">
+            <input type="checkbox" value="option1" class="food09"> FoodType09
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option2" class="food10"> FoodType10
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" class="food11"> FoodType11
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" class="food12"> FoodType12
         </label>
       </div>
      </div>
@@ -234,15 +253,30 @@
   </div>
 <!--theme end-->
 
-
-
 <!--extra information-->
     <div class="container mt10">
-        <h4>Any Extra information to add</h4>
-    <INPUT TYPE="TEXT" NAME="MyValue" placeholder="Extra information?">
-
+        <h4>Additional information to guests</h4>
+        <input type="text" id="messageInput" placeholder=" Message">
 <!--extra information end-->
+        <div class="container mt60">
+        <button type="button" class="btn btn-default btn-lg">Save Dinner</button>
+        </div>
+        <!--Adding dinner to Firebase by pressing Enter-->
+            <script>
+              var myDinnerRef = new Firebase('https://tastyplanetse.firebaseio.com/dinners');
+                $('#messageInput').keypress(function (e) {
+                  if (e.keyCode == 13) {
+                    var dinnerName = $('#dinnerNameInput').val();
+                    var dateTime = $('#dateTimeInput').val();
+                    var userId = $('#userIdInput').val();
+                    var userAddress =$('#userAddressInput').val();
+                    var message =$('#messageInput').val();
+                    myDinnerRef.push({dinnerName: dinnerName, dateTime: dateTime, userId: userId, userAddress: userAddress, message: message});
 
+                    console.log({dinnerName: dinnerName, dateTime: dateTime, userId: userId, userAddress: userAddress, message: message});
+                  }
+                });
+            </script>
     </div>
     </div>
 </div>
@@ -260,6 +294,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
     <script src="js/instafeed.min.js"></script>
     
 </body>

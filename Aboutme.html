@@ -4,86 +4,96 @@
     <title>About me</title>
 
     <!--  CSS  -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700|Roboto:400,300italic,700|Titan+One' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
 
     <!--  JAVASCRIPT  -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src='https://cdn.firebase.com/v0/firebase.js'></script>
-    <script type="text/javascript" src="js/main.js"></script>
-
   </head>
 
   <body>
-
     <div class="containter mt09">
     <!--header-->
     <div class="jumbotron">
       <h4>About me</h4>
     </div>
     <!--header end-->
+    
     <div class="container mt10">
       <div class="containter mt20">
-            <label for="Header">My Name</label>
-            <INPUT TYPE="TEXT" NAME="MyValue" placeholder="Enter Name">
-            <label for="exampleInputNumber">My Phonenumber</label>
-            <input type="number" class="form-control" id="exampleInputNumber" placeholder="Enter Phone Number">
-            <label for="Header">My Email</label>
-            <INPUT TYPE="TEXT" NAME="MyValue" placeholder="Enter Email">
-            <label for="Header">My Address</label>
-            <INPUT TYPE="TEXT" NAME="MyValue" placeholder="Enter Address">
+            <label for="Name">My Name</label>
+            <input type="text" id="userNameInput" placeholder="Enter Name">
+            <label for="Email">My Email</label>
+            <input type="email" id="userIdInput" requried placeholder="Enter Email">
+            <label for="Address">My Address</label>
+            <input type="text" id="userAddressInput" placeholder="Enter Address">
+            <!--Add profile to Firebase-->
+            <script>
+              var myDataRef = new Firebase('https://tastyplanetse.firebaseio.com/profiles');
+                $('#userAddressInput').keypress(function (e) {
+                  if (e.keyCode == 13) {
+                    var userName = $('#userNameInput').val();
+                    var userId = $('#userIdInput').val();
+                    var userAddress =$('#userAddressInput').val();
+                    myDataRef.push(userId. {userId: userId, userName: userName, userAddress: userAddress});
+                    $('#userAddressInput').val('');
+                    console.log({userId: userId, userName: userName, userAddress: userAddress});
+                  }
+                });
+            </script>
       </div>
      </div>
     </div>
-
-
+    
+    <!--Favourite food functionality PENDING-->
 <div class="container mt40">
   <div class="control-group">
-    <h4>My favourites</h4>
+    <h4>Favourite foods</h4>
     <div class="container mt42">
     <div class="controls span1">
         <label class="checkbox">
-            <input type="checkbox" value="option1" id="inlineCheckbox1"> Meat
+            <input type="checkbox" value="option1" id="food01"> FoodType01
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option2" id="inlineCheckbox2"> Meat
+            <input type="checkbox" value="option2" id="food02"> FoodType02
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox3"> Meat
+            <input type="checkbox" value="option3" id="food03"> FoodType03
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox4"> Meat
-        </label>
-    </div>
-    <div class="controls span1">
-        <label class="checkbox">
-            <input type="checkbox" value="option1" id="inlineCheckbox5"> Meat
-        </label>
-        <label class="checkbox">
-            <input type="checkbox" value="option2" id="inlineCheckbox6"> Meat
-        </label>
-        <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox7"> Meat
-        </label>
-        <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox8"> Meat
+            <input type="checkbox" value="option3" id="food04"> FoodType04
         </label>
     </div>
     <div class="controls span1">
         <label class="checkbox">
-            <input type="checkbox" value="option1" id="inlineCheckbox9"> Meat
+            <input type="checkbox" value="option1" id="food05"> FoodType05
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option2" id="inlineCheckbox10"> Meat
+            <input type="checkbox" value="option2" id="food06"> FoodType06
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox11"> Meat
+            <input type="checkbox" value="option3" id="food07"> FoodType07
         </label>
         <label class="checkbox">
-            <input type="checkbox" value="option3" id="inlineCheckbox12"> Meat
+            <input type="checkbox" value="option3" id="food08"> FoodType08
+        </label>
+    </div>
+    <div class="controls span1">
+        <label class="checkbox">
+            <input type="checkbox" value="option1" id="food09"> FoodType09
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option2" id="food10"> FoodType10
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" id="food11"> FoodType11
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="option3" id="food12"> FoodType12
         </label>
       </div>
      </div>

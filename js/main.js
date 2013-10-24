@@ -5,6 +5,3 @@ $(document).ready(function() {
         language: 'pt-BR'
       });
 });
-
-<!-- Firebase support -->
-var myDataRef = new Firebase('https://tastyplanetse.firebaseio.com/');
