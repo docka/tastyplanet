@@ -101,25 +101,26 @@
 
   <div class="control-group">
     <h4>My favourites</h4>
-       <form action="action">
-    
-<input type="checkbox" name="favorites" value="Seafood">Seafood
-<input type="checkbox" name="favorites" value="Grilled Meat">Grilled Meat
-<input type="checkbox" name="favorites" value="Roasted">Meat
-<input type="checkbox" name="favorites" value="Stewed Meat">Stewed Meat <br>  
-<input type="checkbox" name="favorites" value="Soup">Soup/Stew/Chowder
-<input type="checkbox" name="favorites" value="Fowl">Fowl
-<input type="checkbox" name="favorites" value="Veggies">Veggies
-<input type="checkbox" name="favorites" value="Fruits">Fruits <br> 
-<input type="checkbox" name="favorites" value="Pasta">Pasta
-<input type="checkbox" name="favorites" value="Dumplings">Dumplings
-<input type="checkbox" name="favorites" value="Bread">Bread
-<input type="checkbox" name="favorites" value="Potatoes">Potatoes <br> 
-<input type="checkbox" name="favorites" value="Buns">Buns
-<input type="checkbox" name="favorites" value="Cakes">Cakes
-<input type="checkbox" name="favorites" value="Cookies">Cookies
-<input type="checkbox" name="favorites" value="Custards">Custards <br>  
-</form>
+       <label for="Favourites">
+           <form action="action">
+            <input type="checkbox" name="favorite01" value="Seafood">Seafood
+            <input type="checkbox" name="favorite02" value="Grilled Meat">Grilled Meat
+            <input type="checkbox" name="favorite03" value="Roasted">Meat
+            <input type="checkbox" name="favorite04" value="Stewed Meat">Stewed Meat <br>
+            <input type="checkbox" name="favorite05" value="Soup">Soup/Stew/Chowder
+            <input type="checkbox" name="favorite06" value="Fowl">Fowl
+            <input type="checkbox" name="favorite07" value="Veggies">Veggies
+            <input type="checkbox" name="favorite08" value="Fruits">Fruits <br> 
+            <input type="checkbox" name="favorite09" value="Pasta">Pasta
+            <input type="checkbox" name="favorite10" value="Dumplings">Dumplings
+            <input type="checkbox" name="favorite11" value="Bread">Bread
+            <input type="checkbox" name="favorite12" value="Potatoes">Potatoes <br> 
+            <input type="checkbox" name="favorite13" value="Buns">Buns
+            <input type="checkbox" name="favorite14" value="Cakes">Cakes
+            <input type="checkbox" name="favorite15" value="Cookies">Cookies
+            <input type="checkbox" name="favorite16" value="Custards">Custards <br>  
+            </form>
+        </label>
 
         <!--Adding profile to Firebase by pressing Enter-->
             <script>
@@ -128,7 +129,8 @@
                   if (e.keyCode == 13) {
                     var userName = $('#userNameInput').val();
                     var userId = $('#userIdInput').val();
-                    var userAddress =$('#userAddressInput').val();
+                    var userAddress = $('#userAddressInput').val();
+                    //var userFavourites = $('Favourites').val();
                     myProfileRef.push({userId: userId, userName: userName, userAddress: userAddress});
                     
                     console.log({userId: userId, userName: userName, userAddress: userAddress});
