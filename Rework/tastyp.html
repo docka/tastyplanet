@@ -7,14 +7,6 @@
     <link href="css/bootstrap3.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700|Roboto:400,300italic,700|Titan+One' rel='stylesheet' type='text/css'>
-
-    <!--  JAVASCRIPT  -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
-    <script src="js/instafeed.min.js"></script>
-
 </head>
 <body>
 
@@ -167,11 +159,6 @@
 
 
 
-<!--theme-->
-
-  
-
-
 
 <!--extra information-->
     <div class="container mt10">
@@ -201,21 +188,26 @@
     </div>
 </div>
 </div> 
-
-
+<frame>
 <div class="section" id="part4" style="display: none;">
-    <img src="images/map.jpg" class="col-xs-4 col-md-6 col-lg-12">
+<div id="map"></div></frame>
 </div>
 
 
 
 
     <!--  JAVASCRIPT  -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src='https://cdn.firebase.com/v0/firebase.js'></script>
     <script src="js/instafeed.min.js"></script>
+    <script src="js/map.js"></script>
+    <link href="css/map.css" rel="stylesheet"></style>
     
 </body>
 </html>
