@@ -47,12 +47,12 @@ var myDinnerRef = new Firebase('https://tastyplanetse.firebaseio.com/dinners');
                   if (e.keyCode == 13) {
                     var dinnerName = $('#dinnerNameInput').val();
                     var dateTime = $('#dateTimeInput').val();
-                    var userId = $('#userIdInput').val();
+                    var userSeats = $('#seatsNameInput').val();
                     var userAddress =$('#userAddressInput').val();
                     var message =$('#messageInput').val();
-                    myDinnerRef.push({dinnerName: dinnerName, dateTime: dateTime, userId: userId, userAddress: userAddress, message: message});
+                    myDinnerRef.push({dinnerName: dinnerName, dateTime: dateTime, userSeats: userSeats, userId: userId, userAddress: userAddress, message: message});
 
-                    console.log({dinnerName: dinnerName, dateTime: dateTime, userId: userId, userAddress: userAddress, message: message});
+                    console.log({dinnerName: dinnerName, dateTime: dateTime, userSeats: userSeats, userId: userId, userAddress: userAddress, message: message});
                   }
                 });
 

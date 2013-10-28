@@ -10,8 +10,10 @@ $(document).ready(function(){
 	});
 
 	function createMarker(properties) {
-		var marker = L.marker([userAddress]).addTo(map);
+		var marker = L.marker([userAddressInput]).addTo(map);
 		marker.bindPopup(properties.dinnerName, properties.userAddress, properties.dateTime, properties.userId, properties.message).openPopup();
 	};
 
 });
+
+$
