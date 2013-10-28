@@ -2,7 +2,7 @@ $(document).ready(function(){
 	//var map = L.mapbox.map('map', 'tastyplanetse.map-mnphjjx4');
 	//var json = null;
 	var map_options, map, marker, lat, lon;
-	//$("#part1").hide();
+	
 
 
 
@@ -53,7 +53,7 @@ $(document).ready(function(){
 	);
 	}
 
-	
+
 
 /*
 	function createMarker(properties) {
