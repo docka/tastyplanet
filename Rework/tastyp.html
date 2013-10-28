@@ -10,6 +10,7 @@
 </head>
 <body>
 
+
 <nav id="navbar" class="navbar navbar-default" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
 	<div class="container">
@@ -45,12 +46,14 @@
 
         <div class="col-md-4">
             <div id="text" style="padding:40px;">
-                <p><h4>About:</h4> TastyPlanet is a community for people passionate about sharing the flavors of life with friends new and old. We are here to connect hungry eaters with exciting home-cooked meals, prepared by talented chefs near you! <br>
+                <h4>About:</h4><p align="left">TastyPlanet is a community for people passionate about sharing the flavors of life with friends new and old. We are here to connect hungry eaters with exciting home-cooked meals, prepared by talented chefs near you! <br>
                 Here is how it works; once you sign up with your Facebook account you can see what people are cooking to share in your location. Then, you can decide what looks tasty or add yourself to the list of cooks looking to share your talent for a small donation of your choice. </p>
 
-                <h4>Eat:</h4> Are you hungry for adventure? If you are TastyPlanet is for you. Once you sign up you will have access to a wide variety of home-cooked meals available by location in real-time. Come and get it! 
+                <h4>Eat:</h4><p align="left">Are you hungry for adventure? If you are TastyPlanet is for you. Once you sign up you will have access to a wide variety of home-cooked meals available by location in real-time. Come and get it!</p>
 
-                <h4>Cook:</h4> As a TastyPlanet cook you will be connected with an enthusiast community ready to enjoy your food. Share how you taste the world! Create your favorite dishes or experiment with new exciting new foods as guided by user requests from our live Twitter feed. You are the head chef! Best of all your passion is supported by eaters donations.  
+                <h4>Cook:</h4> <p align="left">As a TastyPlanet cook you will be connected with an enthusiast community ready to enjoy your food. Share how you taste the world! Create your favorite dishes or experiment with new exciting new foods as guided by user requests from our live Twitter feed. You are the head chef! Best of all your passion is supported by eaters donations.</p>  
+
+
             </div>
         </div>
                 <!--instagram-->
@@ -115,19 +118,7 @@
         </label>
 
         <!--Adding profile to Firebase by pressing Enter-->
-            <script>
-              var myProfileRef = new Firebase('https://tastyplanetse.firebaseio.com/profiles');
-                $('#userAddressInput').keypress(function (e) {
-                  if (e.keyCode == 13) {
-                    var userName = $('#userNameInput').val();
-                    var userId = $('#userIdInput').val();
-                    var userAddress = $('#userAddressInput').val();
-                    //var userFavourites = $('Favourites').val();
-                    myProfileRef.push({userId: userId, userName: userName, userAddress: userAddress});
-                    
-                    console.log({userId: userId, userName: userName, userAddress: userAddress});
-                  }
-                });
+
             </script>
         <div class="container mt60">
         <button type="button" id="save" class="btn btn-default btn-lg">Save Profile</button>
@@ -157,7 +148,7 @@
       <input type="text" id="dateTimeInput" placeholder="Day & Time?"></input>
     </div> 
   
-<!--set date & time-->
+<!--set date & time end-->
 
 
 
@@ -171,21 +162,7 @@
         <button type="button" id="saved" class="btn btn-default btn-lg">Save Dinner</button>
         </div>
         <!--Adding dinner to Firebase by pressing Enter-->
-            <script>
-              var myDinnerRef = new Firebase('https://tastyplanetse.firebaseio.com/dinners');
-                $('#messageInput').keypress(function (e) {
-                  if (e.keyCode == 13) {
-                    var dinnerName = $('#dinnerNameInput').val();
-                    var dateTime = $('#dateTimeInput').val();
-                    var userId = $('#userIdInput').val();
-                    var userAddress =$('#userAddressInput').val();
-                    var message =$('#messageInput').val();
-                    myDinnerRef.push({dinnerName: dinnerName, dateTime: dateTime, userId: userId, userAddress: userAddress, message: message});
 
-                    console.log({dinnerName: dinnerName, dateTime: dateTime, userId: userId, userAddress: userAddress, message: message});
-                  }
-                });
-            </script>
     </div>
     </div>
 </div>

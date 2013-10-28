@@ -28,6 +28,34 @@ $(document).ready(function(){
     //console.log("click")
    });
 
+            
+              var myProfileRef = new Firebase('https://tastyplanetse.firebaseio.com/profiles');
+                $('#userAddressInput').keypress(function (e) {
+                  if (e.keyCode == 13) {
+                    var userName = $('#userNameInput').val();
+                    var userId = $('#userIdInput').val();
+                    var userAddress = $('#userAddressInput').val();
+                    //var userFavourites = $('Favourites').val();
+                    myProfileRef.push({userId: userId, userName: userName, userAddress: userAddress});
+                    
+                    console.log({userId: userId, userName: userName, userAddress: userAddress});
+                  }
+                });
+
+var myDinnerRef = new Firebase('https://tastyplanetse.firebaseio.com/dinners');
+                $('#messageInput').keypress(function (e) {
+                  if (e.keyCode == 13) {
+                    var dinnerName = $('#dinnerNameInput').val();
+                    var dateTime = $('#dateTimeInput').val();
+                    var userId = $('#userIdInput').val();
+                    var userAddress =$('#userAddressInput').val();
+                    var message =$('#messageInput').val();
+                    myDinnerRef.push({dinnerName: dinnerName, dateTime: dateTime, userId: userId, userAddress: userAddress, message: message});
+
+                    console.log({dinnerName: dinnerName, dateTime: dateTime, userId: userId, userAddress: userAddress, message: message});
+                  }
+                });
+
 
   //instagram feed
 
