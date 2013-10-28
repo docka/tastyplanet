@@ -1,3 +1,4 @@
+var userAddress;
 $(document).ready(function(){
 
     $( "#setting" ).on('click', function() {
@@ -41,21 +42,32 @@ $(document).ready(function(){
                     console.log({userId: userId, userName: userName, userAddress: userAddress});
                   }
                 });
-
 var myDinnerRef = new Firebase('https://tastyplanetse.firebaseio.com/dinners');
                 $('#messageInput').keypress(function (e) {
                   if (e.keyCode == 13) {
                     var dinnerName = $('#dinnerNameInput').val();
                     var dateTime = $('#dateTimeInput').val();
-                    var userSeats = $('#seatsNameInput').val();
-                    var userAddress =$('#userAddressInput').val();
+                    var userId = $('#userIdInput').val();
+                    console.log(tastyplanetse.dinners.userAddress)
                     var message =$('#messageInput').val();
-                    myDinnerRef.push({dinnerName: dinnerName, dateTime: dateTime, userSeats: userSeats, userId: userId, userAddress: userAddress, message: message});
+                    myDinnerRef.push({dinnerName: dinnerName, dateTime: dateTime, userId: userId, userAddress: userAddress, message: message});
 
-                    console.log({dinnerName: dinnerName, dateTime: dateTime, userSeats: userSeats, userId: userId, userAddress: userAddress, message: message});
+                    console.log({dinnerName: dinnerName, dateTime: dateTime, userId: userId, userAddress: userAddress, message: message});
                   }
                 });
 
+
+function codeAddress(address) {
+  geocoder.geocode( { 'address': address}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      map.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location
+      });
+}
+});
+}     
 
   //instagram feed
 

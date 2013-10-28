@@ -3,9 +3,9 @@ body {
 	padding:0;
 }
 
-#map {
+#map_canvas {
 	position: absolute;
-	top:0;
+	top:300px;
 	bottom:0;
 	width:100%;
 }
