@@ -19,10 +19,17 @@
 			   <div class="col-md-12">
 				<ul>
 					<li><button id="book" type="button" class="btn btn-default navbar-btn">book</button></li>
-					<li><button id="cook" type="button" class="btn btn-default navbar-btn">cook</button></li>
-					<li><button id="setting" type="button" class="btn btn-default navbar-btn">me</button></li>
+                    <span id="logged-in-actions">
+					   <li><button id="cook" type="button" class="btn btn-default navbar-btn">cook</button></li>
+					   <li><button id="setting" type="button" class="btn btn-default navbar-btn">me</button></li>
+                       <li><button id="logout" type="button" class="btn btn-default navbar-btn">sign out</button></li>
+                    </span>
+                    <span id="logged-out-actions">
+                        <li><button id="loginBtn" type="button" class="btn btn-default navbar-btn">login / create account</button></li>
+                    </span>
 					<li><a href="tastyp.html"><img src="images/logo-tastyp.png"><div class="img-responsive" style="width: 40px;"></a></li>
 				</ul>
+
 			 </div>
 		  </div>
 	   </div>	
@@ -100,9 +107,7 @@
     <!--header end-->
     <div class="container mt15">
             <label for="Name">Name</label>
-            <input type="text" id="userNameInput" placeholder=" Insert your Name">
-            <label for="Email">Email</label>
-            <input type="email" id="userIdInput" requried placeholder=" Insert your Email">
+            <input type="text" id="userNameInput" placeholder=" Insert your Name"><br>
             <label for="Address">Address</label>
             <input type="text" id="userAddressInput" placeholder=" Insert your Address">
      </div>
@@ -135,7 +140,7 @@
 
             </script>
         <div class="container mt60">
-        <button type="button" id="save" class="btn btn-default btn-lg">Save Profile</button>
+        <button type="button" id="saveProfileBtn" class="btn btn-default btn-lg">Save Profile</button>
         </div>
         </div> 
       </div>
@@ -155,9 +160,10 @@
             <input type="text" id="seatsNameInput" placeholder=" How many seats?">
         </section>
         <!--set date & time-->        
-         <div id="datetimepicker">
+        <div id="datetimepicker">
           <input type="text" id="dateTimeInput" placeholder="Day & Time?"></input>
-        </div> 
+        </div>
+    </div> 
 
     <!--extra information-->
     <div class="container mt10">
@@ -165,20 +171,38 @@
         <input type="text" id="messageInput" placeholder=" Message">
 <!--extra information end-->
         <div class="container mt60">
-        <button type="button" id="saved" class="btn btn-default btn-lg">Save Dinner</button>
+            <button type="button" id="saveDinnerBtn" class="btn btn-default btn-lg">Save Dinner</button>
         </div>
         <!--Adding dinner to Firebase by pressing Enter-->
-
-    </div>
     </div>
 </div>
+
+<div class="section" id="part4" style="display: none; width: 100%; height: 100%">
+    <div id="map_canvas" style="border: 1px solid black; width: 100%; height: 100%"></div>
 </div>
 
-<div class="section" id="part4" style="display: none;">
 
-
-    <div id="map_canvas" style="border: 1px solid black; width: 100%;">
+<div class="section" id="part5" style="display: none;">
+    <div class="container mt05">
+        <section id="login">
+            <h4>Login</h4>
+            <input type="text" class="email" placeholder="email"><br>
+            <input type="text" class="password" placeholder="password"><br>
+            <button type="button" class="loginBtn" class="btn btn-default btn-lg">Login</button>
+        </section>
+    </div>
+    <!--extra information-->
+    <div class="container mt10">
+      <section id="create-account">
+        <h4>Create an account</h4>
+        <input type="text" class="email" placeholder="email"><br>
+        <input type="text" class="password" placeholder="password"><br>
+        <input type="text" class="password-confirm" placeholder="confirm password"><br>
+        <button type="button" class="createAccountBtn" class="btn btn-default btn-lg">Create Account</button>
+      </section>
+    </div>
 </div>
+
 
 
 
@@ -196,6 +220,9 @@
     <script src='https://cdn.firebase.com/v0/firebase.js'></script>
     <script src="js/instafeed.min.js"></script>
     <script src="js/map.js"></script>
+    <script type='text/javascript'
+        src='https://cdn.firebase.com/v0/firebase-simple-login.js'>
+    </script>
     <link href="css/map.css" rel="stylesheet"></style>
     
 </body>
